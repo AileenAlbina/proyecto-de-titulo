@@ -1,0 +1,15 @@
+.footerPosition
+{
+    background-color: #11698e;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+}
+
+.footerAuthorText
+{
+    text-align: left;
+    margin-top: 0.5cm;
+}

@@ -1,0 +1,28 @@
+{
+  "horario":[ {
+    "nombre": "Matematicas",
+    "hora_inicio": 8,
+    "hora_termino": 9,
+    "dia": 4,
+    "color":"azul"
+  },
+  {
+    "nombre": "Lenguaje",
+    "hora_inicio": 10,
+    "hora_termino": 11,
+    "dia":1,
+    "color": "rojo"
+  },{
+    "nombre": "Historia",
+    "hora_inicio":8,
+    "hora_termino":9,
+    "dia":3,
+    "color":"Amarillo"
+  },{
+    "nombre": "Ingles",
+    "hora_inicio": 12,
+    "hora_termino":13,
+    "dia":5,
+    "color":"Morado"
+  }]
+  }

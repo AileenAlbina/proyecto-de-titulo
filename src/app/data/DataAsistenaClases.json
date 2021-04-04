@@ -1,0 +1,34 @@
+{
+    "asistencia":[
+        {
+        "fecha": "2021-03-01",
+        "asiste": 1,
+        "justifica":0,
+        "observaciones":""
+        },
+        {
+        "fecha":"2020-06-05",
+        "asiste":0,
+        "justifica":1,
+        "observaciones":""
+        },
+        {
+        "fecha":"2021-04-01",
+        "asiste":1,
+        "justifica":0,
+        "observaciones":"retira temprano"
+        },
+        {
+        "fecha":"2021-03-02",
+        "asiste":1,
+        "justifica":0,
+        "observaciones":""
+        },
+        {
+        "fecha":"2021-03-04",
+        "asiste":0,
+        "justifica":1,
+        "observaciones":""
+        }
+        ]
+    }

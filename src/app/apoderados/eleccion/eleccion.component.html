@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<app-footer></app-footer>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="select3" data-bs-toggle="dropdown" aria-expanded="false">
+            the best menu
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="select3">
+        <li><a class= "dropdown-item" *ngFor= "let alumno of alumnos" href="#"> {{alumno}} </a></li>
+    </ul>
+</div>
+

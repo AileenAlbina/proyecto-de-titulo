@@ -1,0 +1,74 @@
+<nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nombre Aplicación</a>
+    </div>
+  </nav>
+
+<app-footer></app-footer>
+<div class = "container mt-5">
+    <div class="row">
+        <div class="col-4 " >
+            <div class="model-content">
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <div class = 'textoAyuda'>
+                            Iniciar sesión: 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <form [formGroup] = "loginForm" class = "p-3" (ngSubmit)="ingresar(loginForm.value)">
+                            <label for="user" class = "label">Ingrese rut: </label>
+                            <input type="text" formControlName="rut"  placeholder="Ingrese RUT">
+                            <br>
+                            <label for="clave" class = "label">Ingrese contraseña: </label>
+                            <input type="password" formControlName="clave" placeholder="Ingrese contraseña">
+                            <br> 
+                            <br>                          
+                            <button [disabled]="loginForm.invalid"  type = "submit"> Ingresar</button>
+                            <br>
+                        </form>
+                    </div>
+                    <div class="col-8 offset-2 p-3">
+                       
+                        <a href = "#" class = "text-center"> Recuperar contraseña</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-4 offset-4">
+            <h1>col2</h1>
+        </div>
+
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
