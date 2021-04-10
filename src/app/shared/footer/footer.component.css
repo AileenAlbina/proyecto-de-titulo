@@ -2,10 +2,11 @@
 {
     background-color: #11698e;
     color: white;
-    position: absolute;
+    position:fixed;
     bottom: 0px;
     height: 60px;
     width: 100%;
+    bottom: 0px;
 }
 
 .footerAuthorText

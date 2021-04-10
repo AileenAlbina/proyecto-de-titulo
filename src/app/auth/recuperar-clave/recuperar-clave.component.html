@@ -1,1 +1,25 @@
-<p>recuperar-clave works!</p>
+<app-navbar-not-auth></app-navbar-not-auth>
+<app-footer></app-footer>
+
+
+<div class = "container">
+    <div class="row">
+        <div class="col-lg-4 mt-4">
+            <div class="card shadow-lg p-3 mb-5 bg-white">
+                <div class = 'card-header'> Recuperar contraseña: </div>
+                    <div class="card-body">
+                        <form  [formGroup] = "formRecuperarClave" (ngSubmit)="recuperarClave(formRecuperarClave.value)" >
+                            <div class="form-row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="rut" class = "label mt-3" id ="LabelLogin" >Ingrese rut: </label>
+                                    <input type="text" formControlName="rut"  placeholder="Ingrese RUT" required>
+                                    <div class="invalid-feedback">Este campo es requerido.</div>
+                                </div>
+                            </div>
+                            <button  type = "submit" id="recuperarClaveButton"> Recuperar contraseña</button>                            
+                        </form>
+                    </div>
+                </div>                    
+         </div>                    
+    </div>
+</div>

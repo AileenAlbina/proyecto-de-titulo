@@ -1,0 +1,16 @@
+.btn
+{
+    background-color: #11698e;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.dropdown-item
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    text-align: center;
+}

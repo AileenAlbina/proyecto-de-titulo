@@ -1,0 +1,29 @@
+.card-header
+{
+    background-color:  #11698e;;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.separadorSeccion
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.card-body
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#labelEspacio
+{
+    margin-top: 10px;
+}

@@ -12,14 +12,14 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private loginBuilder: FormBuilder) {  
-    this.loginForm = this.loginBuilder.group({
-      rut:['',Validators.required],
-      clave:['',Validators.required]
-
-    });
    }
 
   ngOnInit(): void {
+    
+    this.loginForm = this.loginBuilder.group({
+      rut:['',Validators.required],
+      clave:['',Validators.required]
+    });
   }
 
   ingresar(values)

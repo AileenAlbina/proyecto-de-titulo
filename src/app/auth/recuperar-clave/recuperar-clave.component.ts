@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-recuperar-clave',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecuperarClaveComponent implements OnInit {
 
-  constructor() { }
+  formRecuperarClave: FormGroup;
+
+  constructor(private recuperarClaveBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.formRecuperarClave = this.recuperarClaveBuilder.group({
+      rut:['',Validators.required],
+    });
+
+  }
+
+  recuperarClave(value)
+  {
+    console.log("FUNCIONA");
   }
 
 }

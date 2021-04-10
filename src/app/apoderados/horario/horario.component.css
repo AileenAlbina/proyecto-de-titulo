@@ -1,0 +1,15 @@
+.encabezado{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+
+.table
+{
+    border-radius: 6px ;
+    border:  #11698e;   
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}

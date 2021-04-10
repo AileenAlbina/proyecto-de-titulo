@@ -1,6 +1,8 @@
-#navbar
+.navbar
 {
     background-color: #11698e;
+    height: 4rem;
+    
 }
 
 .btn
@@ -8,6 +10,13 @@
     background-color: #11698e;
     border-radius: 6px;
     border-color: whitesmoke;
-    
+    color: white;
+    width: 6rem;
 }
 
+.borde
+{
+    border: 1px solid red;
+    padding-left: 0px;
+    padding-right: 0px;
+}

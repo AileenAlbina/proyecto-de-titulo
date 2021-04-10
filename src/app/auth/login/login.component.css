@@ -7,35 +7,45 @@
 {
     color: whitesmoke  ;
 }
-.label
-{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1 rem;
 
+.card-header
+{
+    background-color:  #11698e;;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.3rem;
 }
 
-
-.loginButton
+.card-body
 {
-    padding: 4px;
-    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    border-radius:6px;
+}
+
+#loginButton
+{
+    padding: 0.3rem;
+    font-size: 1.2rem;
     color: white;
     background-color: #11698e;
     border-radius: 6px;
     border: 2px solid #11698e;   
     align-items: center;
     margin-top: 1cm;
-    margin-left: 1cm;
+    margin-left: 1.5cm;
     margin-right: 1cm;
-    width: 33.33%;
+    width: 50%;
     justify-content: center;
     display: flex;
     
 }
 
-.textoAyuda
+.clave
 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2 rem;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    margin-left: 1.5cm;
 }

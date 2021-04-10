@@ -1,28 +1,33 @@
 {
   "horario":[ {
     "nombre": "Matematicas",
-    "hora_inicio": 8,
-    "hora_termino": 9,
+    "hora_inicio": 8.15,
+    "hora_termino": 9.45,
     "dia": 4,
-    "color":"azul"
+    "color":"azul",
+    "bloque":1
   },
   {
     "nombre": "Lenguaje",
-    "hora_inicio": 10,
-    "hora_termino": 11,
+    "hora_inicio": 10.00,
+    "hora_termino": 11.30,
     "dia":1,
-    "color": "rojo"
+    "color": "rojo",
+    "bloque":2
   },{
     "nombre": "Historia",
-    "hora_inicio":8,
-    "hora_termino":9,
+    "hora_inicio":8.15,
+    "hora_termino":9.45,
     "dia":3,
-    "color":"Amarillo"
+    "color":"amarillo",
+    "bloque":1
   },{
     "nombre": "Ingles",
-    "hora_inicio": 12,
-    "hora_termino":13,
+    "hora_inicio": 11.50,
+    "hora_termino":13.20,
     "dia":5,
-    "color":"Morado"
+    "color":"morado",
+    "bloque":3
   }]
+
   }

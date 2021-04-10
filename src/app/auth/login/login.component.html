@@ -1,49 +1,37 @@
-<nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#">Nombre Aplicación</a>
-    </div>
-  </nav>
-
+<app-navbar-not-auth></app-navbar-not-auth>
 <app-footer></app-footer>
-<div class = "container mt-5">
+
+<div class = "container">
     <div class="row">
-        <div class="col-4 " >
-            <div class="model-content">
-                <div class="row">
-                    <div class="col-10 offset-1">
-                        <div class = 'textoAyuda'>
-                            Iniciar sesión: 
+        <div class="col-lg-4 mt-4">
+            <div class="card shadow-lg p-3 mb-5 bg-white">
+            <div class = 'card-header'> Iniciar sesión: </div>
+                <div class="card-body">
+                    <form  [formGroup] = "loginForm" (ngSubmit)="ingresar(loginForm.value)" >
+                        <div class="form-row">
+                            <div class="col-md-6 mb-4">
+                                <label for="rut" class = "label mt-3" id ="LabelLogin" >Ingrese rut: </label>
+                                <input type="text" formControlName="rut"  placeholder="Ingrese RUT" required="true">
+                                <div class="invalid-feedback">Este campo es requerido.</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10 offset-1">
-                        <form [formGroup] = "loginForm" class = "p-3" (ngSubmit)="ingresar(loginForm.value)">
-                            <label for="user" class = "label">Ingrese rut: </label>
-                            <input type="text" formControlName="rut"  placeholder="Ingrese RUT">
+                        <div class="form-row">
+                            <div class="col-md-6 mb-4">
+                                <label for="clave" class = "label mt-3" id="labelLogin">Ingrese contraseña: </label>
+                                <input type="password" formControlName="clave" placeholder="Ingrese contraseña" required="true">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button  type = "submit" id="loginButton"> Ingresar</button>                            
+                        </div>
+                        <div class="form-row">
                             <br>
-                            <label for="clave" class = "label">Ingrese contraseña: </label>
-                            <input type="password" formControlName="clave" placeholder="Ingrese contraseña">
-                            <br> 
-                            <br>                          
-                            <button [disabled]="loginForm.invalid"  type = "submit"> Ingresar</button>
-                            <br>
-                        </form>
-                    </div>
-                    <div class="col-8 offset-2 p-3">
-                       
-                        <a href = "#" class = "text-center"> Recuperar contraseña</a>
-                    </div>
-
+                            <a href = "/auth/recuperar-clave" class = "clave"> Recuperar contraseña</a>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-        <div class="col-4 offset-4">
-            <h1>col2</h1>
-        </div>
-
-
-        
+            </div>                    
+        </div>                    
     </div>
 </div>
 

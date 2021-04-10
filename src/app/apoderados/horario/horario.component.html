@@ -1,11 +1,13 @@
 <app-navbar></app-navbar>
 <app-footer></app-footer>
-<h1 class= "display-4 text-center">Horario de clases</h1>
+<h3 class= "encabezado">Horario de clases</h3>
 <div class="container mt-3">
-    <table class="table table-bordered">
+  <!-- Tabla de horario -->
+    <table class="table table-bordered mx-2">
+      <!-- Días de la semana y horas -->
         <thead>
           <tr>
-            <th scope="col">hora</th>
+            <th scope="col">Hora</th>
             <th scope="col">Lunes</th>
             <th scope="col">Martes</th>
             <th scope="col">Miercoles</th>
@@ -13,24 +15,16 @@
             <th scope="col">Viernes</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        <tbody>            
+          <tr *ngFor = "let hora of horas">
+            <th scope="row">{{hora.hora_inicio}} - {{hora.hora_termino}}</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+
         </tbody>
       </table>
 </div>

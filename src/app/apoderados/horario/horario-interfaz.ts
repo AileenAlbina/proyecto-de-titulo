@@ -4,5 +4,6 @@ export interface HorarioInterfaz {
     hora_inicio:number,
     hora_termino:number,
     dia:number,
-    color:string
+    color:string,
+    bloque:number
 }
