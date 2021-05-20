@@ -4,11 +4,12 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { NavbarNotAuthComponent } from './navbar-not-auth/navbar-not-auth.component';
+import { SidebarApoderadoComponent } from './sidebar-apoderado/sidebar-apoderado.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, NavbarComponent, NavbarNotAuthComponent],
+  declarations: [FooterComponent, NavbarComponent, NavbarNotAuthComponent, SidebarApoderadoComponent],
   imports: [
     RouterModule,
     NgxPaginationModule
@@ -16,7 +17,8 @@ import { NavbarNotAuthComponent } from './navbar-not-auth/navbar-not-auth.compon
   exports: [
     FooterComponent,
     NavbarComponent,
-    NavbarNotAuthComponent
+    NavbarNotAuthComponent,
+    SidebarApoderadoComponent
   ]
 })
 export class SharedModule { }

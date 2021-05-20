@@ -78,4 +78,8 @@
     table thead{
         display: none;
     }
+
+    .td i{
+        color: red;
+    }
 }

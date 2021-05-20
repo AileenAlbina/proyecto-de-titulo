@@ -15,45 +15,22 @@
           <table class="table table-bordered">
             <thead>
               <tr>
+                <th scope="col">Tipo</th>
                 <th scope="col">Fecha</th>
-                <th scope="col">Asiste</th>
-                <th scope="col">Justifica</th>
-                <th scope="col">Observaciones</th>
+                <th scope="col">Contenido</th>
+                <th scope="col">Emisor</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let dia of detalleAsistencia| paginate: { itemsPerPage: 10, currentPage: p}">
-                <!-- Día a revisar -->
-                <td scope="row" data-titulo="Fecha: ">{{dia.fecha}}</td>
-
-                <!-- ¿Alumnos asistió a clases? -->
-                <td *ngIf="dia.asiste; else inasistencia" data-titulo="Asiste: ">Si </td>
-
-                <!-- Alumno No asistió, pero Si justifico-->
-                <td *ngIf="!dia.asiste && dia.justifica; else noJustifica" data-titulo="Justifica:">Si</td>
-
-                <!-- Observaciones sobre la asistencia del alumno-->
-                <td class="d-block d-sm-none d-md-block">{{dia.observaciones}}</td>
-
-                <!-- Caso Alumno no asiste a clases -->
-                <ng-template #inasistencia>
-                  <td data-titulo="Asiste: ">NO</td>
-                </ng-template>
-
-                <!-- caso Alumno no asiste a clases y no justifica -->
-                <ng-template #noJustifica>
-                  <td *ngIf="!dia.asiste && !dia.justifica else noAplica" data-titulo="Justifica:">NO</td>
-                </ng-template>
-                <!-- Caso Alumno asiste a clases, no aplica justificar-->
-                <ng-template #noAplica>
-                  <td *ngIf="dia.asiste && !dia.justifica" data-titulo="Justifica: "></td>
-                </ng-template>
-
-              </tr>
+                <tr>
+                    <td><i class="fas fa-cut"> Materiales</i></td>
+                    <td>23-04-2021</td>
+                    <td>Llevar temperas y pincel</td>
+                    <td>Profesor de arte: Nombre apellido</td>
+                </tr >
             </tbody>
           </table>
           <br>
-          <pagination-controls (pageChange)="p = ($event)"></pagination-controls>
         </div>
       </div>
       <div class="card shadow bg-white">
@@ -75,4 +52,6 @@
     </div>
     </div>
   </div>
+
+
 </div>

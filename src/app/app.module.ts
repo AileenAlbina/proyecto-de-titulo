@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
-        AppComponent
+        AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     NgxPaginationModule,
     HttpClientModule,
-
+    SharedModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

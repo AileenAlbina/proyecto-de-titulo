@@ -1,156 +1,214 @@
 <app-navbar></app-navbar>
-<app-footer></app-footer>
-
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="card shadow-lg p-1 mt-3 bg-white">
+            <div class="card shadow-lg p-3 mt-3 bg-white">
                 <div class="card-header"> Crear Ficha Alumno </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
                             <form [formGroup]="formFichaAlumno">
+
                                 <!-- Datos del apoderado titular-->
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="separadorSeccion">Identificación apoderado titular:</div>
                                     </div>
                                     <div class="col-7 form-group">
                                         <label for="nombreAT" id="labelEspacio" class="form-label">Nombres: </label><br>
-                                        <input type="text" formControlName="nombreAT" placeholder="Ingrese nombre"
-                                            class="form-control">
+                                        <input type="text" formControlName="nombreAT" placeholder="Ingrese nombre" class="form-control">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-7 form-group">
                                         <label for="apellidoPAT" id="labelEspacio">Apellido paterno: </label><br>
-                                        <input type="text" formControlName="apellidoPAT" placeholder="Ingrese apellido paterno"
-                                            class="form-control">        
+                                        <input type="text" formControlName="apellidoPAT" placeholder="Ingrese apellido paterno" class="form-control">
                                     </div>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="col-7 form-group">
                                         <label for="apellidoMAT" id="labelEspacio">Apellido materno: </label><br>
-                                        <input type="text" formControlName="apellidoMAT" placeholder="Ingrese apellido materno"
-                                            class="form-control">
+                                        <input type="text" formControlName="apellidoMAT" placeholder="Ingrese apellido materno" class="form-control">
                                     </div>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="col-7 form-group">
                                         <label for="rutAT" id="labelEspacio">RUT:</label><br>
-                                        <input type="text" formControlName="rutAT" placeholder="Ingrese RUT"
-                                            class="form-control">
+                                        <input type="text" formControlName="rutAT" placeholder="Ingrese RUT" class="form-control">
                                     </div>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="col-7 form-group">
                                         <label for="correoAT" id="labelEspacio">E-mail: </label><br>
                                         <input type="mail" name="correoAT" placeholder="Ingrese email" class="form-control">
                                     </div>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="col-7 form-group">
                                         <label for="relacionAAT" id="labelEspacio">Relación con el alumno: </label><br>
-                                        <input type="text" fomrControlName="relacionAAT" placeholder="Ingrese relación con el alumno"        
-                                            class="form-control">
+                                        <input type="text" fomrControlName="relacionAAT" placeholder="Ingrese relación con el alumno" class="form-control">
                                     </div>
                                 </div>
-                                
                                 <div class="row">
                                     <div class="col-7 form-group">
                                         <label for="direccionAT" id="labelEspacio">Dirección: </label><br>
-                                <input type="text" formControlName="direccionAT" placeholder="Ingrese direccipon" class="form-control">
+                                        <input type="text" formControlName="direccionAT" placeholder="Ingrese direccipon" class="form-control">
                                     </div>
                                 </div>
-                                
+
                                 <!-- Apoderado Suplente-->
+
+                                <br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="separadorSeccion">Identificación apoderado suplente:</div>
+                                    </div> 
+                                    <div class="col-7 form-group">
+                                        <label for="nombreAS" id="labelEspacio">Nombre: </label><br>
+                                        <input type="text" formControlName="nombreAS" placeholder="Ingrese nombre" class="form-control">
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-7 form-group">
-
-                                        
+                                        <label for="apellidoPAS" id="labelEspacio">Apellido paterno: </label><br>
+                                        <input type="text" formControlName="apellidoPAS" placeholder="Ingrese apellido paterno" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="apellidoMAS" id="labelEspacio">Apellido materno: </label><br>
+                                        <input type="text" formControlName="apellidoMAS" placeholder="Ingrese apellido materno" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="rutAS" id="labelEspacio">RUT:</label><br>
+                                        <input type="text" formControlName="rutAS" placeholder="Ingrese RUT" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="correoAS" id="labelEspacio">E-mail: </label><br>
+                                        <input type="mail" name="correoAS" placeholder="Ingrese email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="relacionAAS" id="labelEspacio">Relación con el alumno: </label><br>
+                                        <input type="text" fomrControlName="relacionAAS" placeholder="Ingrese relación con el alumno" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="direccionAS" id="labelEspacio">Dirección: </label><br>
+                                        <input type="text" formControlName="direccionAS" placeholder="Ingrese dirección" class="form-control">
                                     </div>
                                 </div>
 
-                                
+                                <!-- Datos del alumno-->
                                 <br>
-                                <div class="separadorSeccion">Identificación apoderado suplente:</div>
-                                <label for="nombreAS" id="labelEspacio">Nombre: </label>
-                                <input type="text" formControlName="nombreAS" placeholder="Ingrese nombre">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="separadorSeccion">Identificación Alumno:</div>
+                                    </div>
+                                    <div class="col-7 form-group">
+                                        <label for="nombreA1" id="labelEspacio">Nombres: </label><br>
+                                        <input type="text" formControlName="nombresA" placeholder="Ingrese nombres"class="form-control" class="form-control">
+                                    </div>
+                                </div>    
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="apellidoPA" id="labelEspacio">Apellido paterno: </label><br>
+                                        <input type="text" formControlName="apellidoPA" placeholder="Ingrese apellido paterno" class="form-control">
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="apellidoMA" id="labelEspacio">Apellido materno: </label><br>
+                                        <input type="text" formControlName="apellidoMA" placeholder="Ingrese apellido materno" class="form-control" >
+                                    </div>
+                                </div>        
+                                <div class="row">    
+                                    <div class="col-7 form-group">
+                                        <label for="rutA" id="labelEspacio">RUT:</label><br>
+                                        <input type="text" formControlName="rutA" placeholder="Ingrese RUT" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">    
+                                    <div class="col-7 form-group">
+                                        <label for="fechaNacA">Fecha de nacimiento</label><br>
+                                        <input type="text" formControlName="fechaNacA" placeholder="Ingrese fecha de nacimiento" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="row">    
+                                    <div class="col-7 form-group">
+                                        <label for="cursoAntA">Curso anterior del alumno:</label><br>
+                                        <input type="text" formControlName="cursoAntA" placeholder="Ingrese curso anterior del alumno" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row"> 
+                                    <div class="col-7 form-group">
+                                        <label for="PVA">Cantidad de personas que viven con el alumno:</label><br>
+                                        <input type="text" formControlName="PVA" placeholder="0" class="form-control">    
+                                    </div>
+                                </div>   
+                                <div class="row">     
+                                    <div class="col-7 form-group">
+                                        <label for="religionA">Religión de la familia</label><br>
+                                        <input type="text" formControlName="religionA" placeholder="Religión de la famila" class="form-control">
+                                    </div>
+                                </div> 
+                                <div class="row">     
+                                    <div class="col-7 form-group">
+                                        <label for="aceptaACR">Acepta clases de religión</label><br>
+                                        <input type="checkbox" formControlName="aceptaACR"class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">     
+                                    <div class="col-7 form-group">
+                                        <label for="enfermedadA">Enfermedad crónica o grave</label><br>
+                                        <input type="text" formControlName="enfermedadA" placeholder="Enfermedad crónica o grave" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">     
+                                    <div class="col-7 form-group">
+                                        <label for="alergiaA">Alergico a: </label><br>
+                                        <input type="text" formControlName="alergiaA" placeholder="Alergico a:" class="form-control" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="colegioPA">Colegio de procedencia</label><br>
+                                        <input type="text" formControlName="colegioPA"placeholder="Colegio de procedencia" class="form-control">
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="ocupacionLPA">Ocupación laboral padre del alumno:</label><br>
+                                        <input type="text" formControlName="ocupacionLPA" placeholder="Ocupación laboral" class="form-control" class="form-control">
+                                    </div>
+                                </div>    
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="ocupacionLMA">Ocupación laboral madre del alumno:</label><br>
+                                        <input type="text" formControlName="ocupacionLMA" placeholder="Ingrese Ocupación laboral" class="form-control">
+                                    </div>
+                                </div>    
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="ingresosFA">Ingreso familiar apróximado:</label><br>
+                                        <input type="text" formControlName="ingresoFA" placeholder="Ingrese ingreso familiar" class="form-control">
+                                    </div>
+                                </div>    
+                                <div class="row">
+                                    <div class="col-7 form-group">
+                                        <label for="direccionA" id="labelEspacio">Dirección: </label><br>
+                                        <input type="text" formControlName="direccionA" placeholder="Ingrese direccipon"class="form-control">
+                                    </div>
+                                </div>
                                 <br>
-                                <label for="apellidoPAS" id="labelEspacio">Apellido paterno: </label>
-                                <input type="text" formControlName="apellidoPAS" placeholder="Ingrese apellido paterno">
-                                <br>
-                                <label for="apellidoMAS" id="labelEspacio">Apellido materno: </label>
-                                <input type="text" formControlName="apellidoMAS" placeholder="Ingrese apellido materno">
-                                <br>
-                                <label for="rutAS" id="labelEspacio">RUT:</label>
-                                <input type="text" formControlName="rutAS" placeholder="Ingrese RUT">
-                                <br>
-                                <label for="correoAS" id="labelEspacio">E-mail: </label>
-                                <input type="mail" name="correoAS" placeholder="Ingrese email">
-                                <br>
-                                <label for="relacionAAS" id="labelEspacio">Relación con el alumno: </label>
-                                <input type="text" fomrControlName="relacionAAS"
-                                    placeholder="Ingrese relación con el alumno">
-                                <br>
-                                <label for="direccionAS" id="labelEspacio">Dirección: </label>
-                                <input type="text" formControlName="direccionAS" placeholder="Ingrese direccipon">
-                                <!-- OTRA COSA-->
-                                <br>
-
-                                <label for="nombreA1" id="labelEspacio">Nombre: </label>
-                                <input type="text" formControlName="nombreA1" placeholder="Ingrese nombre">
-                                <label for="nombreA2" id="labelEspacio">Nombre: </label>
-                                <input type="text" formControlName="nombreA2" placeholder="Ingrese nombre">
-                                <br>
-                                <label for="apellidoPA" id="labelEspacio">Apellido paterno: </label>
-                                <input type="text" formControlName="apellidoPA" placeholder="Ingrese apellido paterno">
-                                <label for="apellidoMA" id="labelEspacio">Apellido materno: </label>
-                                <input type="text" formControlName="apellidoMA" placeholder="Ingrese apellido materno">
-                                <br>
-                                <label for="rutA" id="labelEspacio">RUT:</label>
-                                <input type="text" formControlName="rutA" placeholder="Ingrese RUT">
-                                <br>
-
-                                <label for="fechaNacA">Fecha de nacimiento</label>
-                                <input type="text" formControlName="fechaNacA"
-                                    placeholder="Ingrese fecha de nacimiento">
-                                <br>
-                                <label for="cursoAntA">Curso anterior del alumno:</label>
-                                colocar check box
-                                <label for="PVA">Cantidad de personas que viven con el alumno:</label>
-                                <br>
-                                <input type="text" formControlName="PVA" placeholder="0">
-                                <label for="religionA">Religión de la familia</label>
-                                <input type="text" formControlName="religionA" placeholder="Religión de la famila">
-                                <br>
-                                <label for="aceptaACR">Acepta clases de religión</label>
-                                Colorcar check
-                                <label for="enfermedadA">Enfermedad crónica o grave</label>
-                                <input type="text" formControlName="enfermedadA"
-                                    placeholder="Enfermedad crónica o grave">
-                                <br>
-                                <label for="alergiaA">Alergico a: </label>
-                                <input type="text" formControlName="alergiaA" placeholder="Alergico a:">
-                                <br>
-                                <label for="colegioPA">Colegio de procedencia</label>
-                                <input type="text" formControlName="colegioPA" placeholder="Colegio de procedencia">
-                                <br>
-                                <label for="ocupacionLPA">Ocupación laboral padre del alumno:</label>
-                                <input type="text" formControlName="ocupacionLPA" placeholder="Ocupación laboral">
-                                <br>
-                                <label for="ocupacionLMA">Ocupación laboral madre del alumno:</label>
-                                <input type="text" formControlName="ocupacionLMA"
-                                    placeholder="Ingrese Ocupación laboral">
-                                <br>
-                                <label for="ingresosFA">Ingreso familiar apróximado:</label>
-                                <input type="text" formControlName="ingresoFA" placeholder="Inggrese ingreso familiar">
-                                <label for="direccionA" id="labelEspacio">Dirección: </label>
-                                <input type="text" formControlName="direccionA" placeholder="Ingrese direccipon">
+                                <button>Guardar</button>
                             </form>
                         </div>
                     </div>
@@ -159,3 +217,4 @@
         </div>
     </div>
 </div>
+

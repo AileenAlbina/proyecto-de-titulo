@@ -7,19 +7,6 @@
     text-align: center;
 }
 
-.table
-{
-    border: 6px;
-    border-color: #0992cd ;
-}
-
-@media(max-width:30em){
-    .card-header{
-        text-align: left;
-    }
-}
-
-
 .titulos
 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -78,4 +65,19 @@
     table thead{
         display: none;
     }
+
+}
+
+@media(max-width:30em){
+    .card-header{
+        text-align: left;
+    }
+}
+
+.table
+{
+    border-color: #0992cd ;
+    border: 6px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
 }

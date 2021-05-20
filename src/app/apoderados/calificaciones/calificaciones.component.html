@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<app-footer></app-footer>
+
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-2 d-none d-sm-none d-md-block">
+            <app-sidebar-apoderado></app-sidebar-apoderado>
+        </div>
+        <div class="col mt-4 md-mt-3 ms-mt-2">
+            <div class="card shadow bg-white">
+                <div class="card-header">
+                    Calificiaciones
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Asignatura</th>
+                                <th scope="col" *ngFor="let nota of notas"> Nota {{nota}} </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let asignatura of listAsignaturas">
+                                <td scope="row" id="asignatura">{{asignatura}}</td>
+                                <td data-titulo="Nota 1: "></td>
+                                <td data-titulo="Nota 2: "></td>
+                                <td data-titulo="Nota 3: "></td>
+                                <td data-titulo="Nota 4: "></td>
+                                <td data-titulo="Nota 5: "></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card shadow bg-white">
+                <div class="card-content d-block d-sm-block d-md-none">
+                    <div class="menu">
+                        <h4 class="titulos">Consultar</h4>
+                        <a href="apoderados/calificaciones" class="d-block"><i
+                                class="fas fa-user-graduate lead p-3"></i>Calificiaciones</a>
+                        <a href="apoderados/asistencia" class="d-block"><i
+                                class="fas fa-user-check lead p-3"></i>Asistencia</a>
+                        <a href="apoderados/comportamiento" class="d-block"><i
+                                class="far fa-edit lead p-3"></i>Comportamiento</a>
+                        <a href="apoderados/comunicaciones" class="d-block"><i
+                                class="far fa-envelope lead p-3"></i>Comunicaciones</a>
+                        <a href="apoderados/horario" class="d-block"><i class="far fa-calendar-alt lead p-3"></i>Horario
+                            de clases</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

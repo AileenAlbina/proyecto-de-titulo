@@ -1,0 +1,21 @@
+.card-header{
+    background-color:   #0992cd;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+#recuperarClaveButton
+{
+    background-color: #ae3978;
+    color: white;
+    border-radius: 6px;
+    border-color:#ae3978;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+}
+
+.card-body
+{
+    position: relative;
+}

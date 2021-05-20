@@ -1,16 +1,16 @@
 .navbar
 {
-    background-color:  #11698e;;
+    background-color:  #0992cd;
 }
 
 .navbar-brand
 {
-    color: whitesmoke  ;
+    color: white  ;
 }
 
 .card-header
 {
-    background-color:  #11698e;;
+    background-color:  #0992cd;;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     border-radius: 6px;
@@ -27,11 +27,11 @@
 #loginButton
 {
     padding: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem ;
     color: white;
-    background-color: #11698e;
+    background-color: #ae3978;
     border-radius: 6px;
-    border: 2px solid #11698e;   
+    border: 2px solid #ae3978;   
     align-items: center;
     margin-top: 1cm;
     margin-left: 1.5cm;
@@ -39,6 +39,7 @@
     width: 50%;
     justify-content: center;
     display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
 
@@ -48,4 +49,11 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1rem;
     margin-left: 1.5cm;
+}
+
+.requerido
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: red;
+    font-size: 0.7rem;
 }

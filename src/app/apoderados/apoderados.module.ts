@@ -9,11 +9,14 @@ import { EleccionComponent } from './eleccion/eleccion.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CalificacionesComponent } from './calificaciones/calificaciones.component';
+import { ComportamientoComponent } from './comportamiento/comportamiento.component';
+import { ComunicacionesComponent } from './comunicaciones/comunicaciones.component';
 
 
 
 @NgModule({
-  declarations: [AlumnoComponent, HorarioComponent, AsistenciaComponent, EleccionComponent],
+  declarations: [AlumnoComponent, HorarioComponent, AsistenciaComponent, EleccionComponent, CalificacionesComponent, ComportamientoComponent, ComunicacionesComponent],
   imports: [
     CommonModule,
     ApoderadosRoutingModule,  

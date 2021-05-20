@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<app-footer></app-footer>
+
+<div class="container-fluid lg-mt-5 md-mt-4 sm-mt-2 pt-4 ">
+  <div class="row">
+    <div class="col-2 d-none d-sm-none d-md-block">
+      <app-sidebar-apoderado></app-sidebar-apoderado>
+  </div>
+    <div class="col">
+      <div class="card shadow bg-white">
+        <div class="card-header">
+          <p>Antaciones de comportamiento</p>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Contenido</th>
+                <th scope="col">Emisor</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>24-04-2021</td>
+                <td><i class="far fa-times-circle lead" id="color"></i>  Negativa</td>
+                <td>Alumno se presenta sin materiales</td>
+                <td>Profesor de arte: Nombre Apellido</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card shadow bg-white">
+        <div class="card-content d-block d-sm-block d-md-none">
+            <div class="menu">
+                <h4 class="titulos">Consultar</h4>
+                <a href="apoderados/calificaciones" class="d-block"><i
+                        class="fas fa-user-graduate lead p-3"></i>Calificiaciones</a>
+                <a href="apoderados/asistencia" class="d-block"><i
+                        class="fas fa-user-check lead p-3"></i>Asistencia</a>
+                <a href="apoderados/comportamiento" class="d-block"><i
+                        class="far fa-edit lead p-3"></i>Comportamiento</a>
+                <a href="apoderados/comunicaciones" class="d-block"><i
+                        class="far fa-envelope lead p-3"></i>Comunicaciones</a>
+                <a href="apoderados/horario" class="d-block"><i class="far fa-calendar-alt lead p-3"></i>Horario
+                    de clases</a>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

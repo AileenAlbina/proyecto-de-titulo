@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-ficha-alumno',
@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CrearFichaAlumnoComponent implements OnInit {
 
   public formFichaAlumno:FormGroup;
-
+  
   constructor(private fichaAlumnoBuilder: FormBuilder) {
     this.formFichaAlumno = this.fichaAlumnoBuilder.group({
       nombreAT:['',Validators.required],

@@ -1,13 +1,18 @@
 .navbar
 {
-    background-color: #11698e;
+    background-color: #0992cd;
     height: 4rem;
+    z-index: 1;
     
 }
 
+.navbar li{
+    list-style: none;
+    padding-left: 1rem;
+}
 .btn
 {
-    background-color: #11698e;
+    background-color: #0992cd;
     border-radius: 6px;
     border-color: whitesmoke;
     color: white;
@@ -19,4 +24,9 @@
     border: 1px solid red;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.fas
+{
+    color: white;
 }
