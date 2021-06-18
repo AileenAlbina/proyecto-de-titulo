@@ -15,6 +15,7 @@ import { ComunicacionesComponent } from './comunicaciones/comunicaciones.compone
 
 
 
+
 @NgModule({
   declarations: [AlumnoComponent, HorarioComponent, AsistenciaComponent, EleccionComponent, CalificacionesComponent, ComportamientoComponent, ComunicacionesComponent],
   imports: [

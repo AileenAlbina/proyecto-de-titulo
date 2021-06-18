@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-3 d-none d-sm-none d-md-block">
+            <!--SIDEBAR-->
+            <div class="sidebar mb-5">
+                <div class="card shadow bg-white">
+                    <div class="card-content">
+                        <div class="tituloSideBar"> <strong> Adminsitrar apoderados <br>y alumnos </strong></div>
+                        <ul>
+                            <li><a onclik="CPA()"><i class="fas fa-user lead p-3"></i>Crear Perfil Apoderado</a></li>
+                            <li><a  ><i class="fas fa-user lead p-3"></i>Crear Perfil Alumno</a></li>
+                            <li><a (clik)="MPA()"><i class="fas fa-user-edit lead p-3"></i>Modificar o eliminar <br> Perfil Apoderado</a></li>
+                            <li><a><i class="far fa-user-edit lead p-3"></i>Modificar o eliminar <br> Perfil Alumno</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Componentes-->
+        <div class="col" id='contFAlumno'>
+            <div class="card shadow bg-white mt-1">
+                <div class="card-content d-block d-sm-block d-md-none">
+                    <div class="menu">
+                        <h4 class="titulos">Consultar</h4>
+                        <a href="apoderados/calificaciones" class="d-block"><i
+                                class="fas fa-user-graduate lead p-3"></i>Calificiaciones</a>
+                        <a href="apoderados/asistencia" class="d-block"><i
+                                class="fas fa-user-check lead p-3"></i>Asistencia</a>
+                        <a href="apoderados/comportamiento" class="d-block"><i
+                                class="far fa-edit lead p-3"></i>Comportamiento</a>
+                        <a href="apoderados/comunicaciones" class="d-block"><i
+                                class="far fa-envelope lead p-3"></i>Comunicaciones</a>
+                        <a href="apoderados/horario" class="d-block"><i class="far fa-calendar-alt lead p-3"></i>Horario
+                            de clases</a>
+                    </div>
+                </div>
+            </div>
+
+            <h1>is seleccionado {{isSeleccionado}}</h1>    
+         <!--   <div [ngSwitch]="{{isSeleccionado}}">
+                <div *ngSwitchCase=1> <app-crear-ap></app-crear-ap></div>
+                <div *ngSwitchCase=3 > <app-admin-ap></app-admin-ap> </div>
+            </div>
+-->
+        </div>
+        
+      
+    </div>
+</div>

@@ -1,0 +1,127 @@
+.navbar
+{
+    background-color: #0992cd;
+    height: 4rem;
+    z-index: 1;
+    
+}
+
+.navbar li{
+    list-style: none;
+    padding-left: 1rem;
+}
+.btn
+{
+    background-color: #0992cd;
+    border-radius: 6px;
+    border-color: whitesmoke;
+    color: white;
+    width: 6rem;
+}
+
+.borde
+{
+    border: 1px solid red;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.fas
+{
+    color: #2a2a2a;
+}
+
+
+.sidebar
+{
+    height: max-content;
+    width:max-content;
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-color: white;
+
+}
+
+.sidebar a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li:hover{
+    
+    background: white;
+    border-left: 5px solid #0992cd;
+}
+
+.sidebar li{
+   outline: 1px solid white;
+   transition: border 0.3s;
+}
+
+.sidebar i{
+    color: #ae3978;
+}
+
+.tituloSideBar
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#0992cd;
+    font-weight: 1rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 1em;
+    
+}   
+
+.card-header
+{
+    background-color: #ae3978;    
+}
+
+.table
+{
+    color:#2a2a2a;
+}
+
+.botonCrud
+{
+    font-size: 0.8rem ;
+    color: white;
+    background-color: white;
+    border-radius: 6px;  
+    border: 2px solid white;   
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+#busqueda
+{
+    border-color: white;
+}
+
+.table td{
+    text-align: left;
+    vertical-align: middle;
+}
+
+.titulo{
+    font-size: 1.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+}
+

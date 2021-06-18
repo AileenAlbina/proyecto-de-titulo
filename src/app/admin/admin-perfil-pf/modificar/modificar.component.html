@@ -1,0 +1,184 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow bg-white mb-3">
+
+                <!-- CARD HEADER-->
+                <div class="card-header">
+                    <i class="fas fa-user lead p-3">
+                        Modificar Perfil Profesor o Funcionario
+                    </i>
+                </div>
+            
+                <!-- CARD BODY-->
+                <div class="card-body mb-5">
+            
+                    <!-- REGISTER FORM-->
+                    <form (ngSubmit)="onSave()" [formGroup]="personalRegisterForm">
+                        <div class="row">
+            
+                            <!-- Nombres -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="nombres-input" class="form-label"><strong>Nombres</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="nombres-input" formControlName="nombres"
+                                        [class]="isValidField('nombres')" placeholder="ingrese nombre/s">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('nombres').errors?.required">
+                                            Debe ingresar al menos un nombre.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Apellido Paterno -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="apellidoPaterno-input" class="form-label"><strong>Apellido Paterno</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="apellidoPaterno-input"
+                                        formControlName="apellidoPaterno" [class]="isValidField('apellidoPaterno')"
+                                        placeholder="Ingrese apellido">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('apellidoPaterno').errors?.required">
+                                            Por favor ingrese su apellido.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Apellido Materno -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="apellidoMaterno-input" class="form-label"><strong>Apellido Materno</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="apellidoPaterno-input"
+                                        formControlName="apellidoMaterno" [class]="isValidField('apellidoMaterno')"
+                                        placeholder="Ingrese apellido">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('apellidoMaterno').errors?.required">
+                                            Por favor ingrese su apellido.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- RUT -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="rut-input" class="form-label"><strong>Rut</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="rut-input" formControlName="rut"
+                                        [class]="isValidField('rut')" placeholder="Ej: XXXXXXXX-X">
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('rut').errors?.required">
+                                            Ingrese rut (11111111-1)
+                                        </span>
+            
+                                        <span *ngIf="personalRegisterForm.get('rut').errors?.pattern">
+                                            Por favor ingrese rut de esta forma 11111111-1.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- EMAIL INPUT -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="email-input" class="form-label"><strong>E-mail</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="email" class="form-control" id="email-input" formControlName="email"
+                                        [class]="isValidField('email')" placeholder="Ej: ejemplo@gmail.com">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('email').errors?.required">
+                                            Debe ingresar un correo electrónico.
+                                        </span>
+                                        <span *ngIf="personalRegisterForm.get('email').errors?.pattern">
+                                            correo electrónico no valido (ej: ejemplo@gmail.com).
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Dirección -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="direccion-input" class="form-label"><strong>Dirección</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="direccion-input" formControlName="direccion"
+                                        [class]="isValidField('direccion')" placeholder="Ej: Avenida 123, comuna">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('direccion').errors?.required">
+                                            Debe ingresar una dirección.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Telefono -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="telefono-input" class="form-label"><strong>Telefono</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="telefono-input" formControlName="telefono"
+                                        [class]="isValidField('telefono')" placeholder="Ej: 912345678">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('telefono').errors?.required">
+                                            Debe ingresar un número de contacto.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Horas cotratadas -->
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="horasContratadas-input" class="form-label"><strong>Horas contratadas</strong>(<span
+                                            class="color">*</span>)</label>
+                                    <input type="text" class="form-control" id="horasContratadas-input"
+                                        formControlName="horasContratadas" [class]="isValidField('horasContratadas')"
+                                        placeholder="Ingrese la cantidad de horas semanales contratadas para el profesor.">
+            
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="personalRegisterForm.get('horasContratadas').errors?.required">
+                                            Para ingresar decimales debe utilizar . Ej: 1.5
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- BUTTONS -->
+                            <div class="row justify-content-evenly mt-3 mb-3">
+                                <div class="col-lg-2 col-3">
+                                    <button type="submit" class="btn btn-success"
+                                        [disabled]="!personalRegisterForm.valid">Registrar</button>
+                                </div>
+                                <div class="col-lg-2 col-3">
+                                    <button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+

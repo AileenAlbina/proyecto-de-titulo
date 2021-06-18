@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <app-footer></app-footer>
-
+<!--
 <div class="container-fluid lg-mt-5 md-mt-4 sm-mt-2 pt-4 ">
   <div class="row">
     <div class="col-2 d-none d-sm-none d-md-block">
@@ -22,29 +22,28 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let dia of detalleAsistencia| paginate: { itemsPerPage: 10, currentPage: p}">
-                <!-- Día a revisar -->
+
                 <td scope="row" data-titulo="Fecha: ">{{dia.fecha}}</td>
 
-                <!-- ¿Alumnos asistió a clases? -->
+
                 <td *ngIf="dia.asiste; else inasistencia" data-titulo="Asiste: ">Si </td>
 
-                <!-- Alumno No asistió, pero Si justifico-->
+
                 <td *ngIf="!dia.asiste && dia.justifica; else noJustifica" data-titulo="Justifica:">Si</td>
 
-                <!-- Observaciones sobre la asistencia del alumno-->
+
                 <td class="d-block d-sm-none d-md-block">{{dia.observaciones}}</td>
 
-                <!-- Caso Alumno no asiste a clases -->
+
                 <ng-template #inasistencia>
                   <td data-titulo="Asiste: ">NO</td>
                 </ng-template>
 
-                <!-- caso Alumno no asiste a clases y no justifica -->
+
                 <ng-template #noJustifica>
                   <td *ngIf="!dia.asiste && !dia.justifica else noAplica" data-titulo="Justifica:">NO</td>
                 </ng-template>
-                <!-- Caso Alumno asiste a clases, no aplica justificar-->
+
                 <ng-template #noAplica>
                   <td *ngIf="dia.asiste && !dia.justifica" data-titulo="Justifica: "></td>
                 </ng-template>
@@ -76,3 +75,5 @@
     </div>
   </div>
 </div>
+
+-->

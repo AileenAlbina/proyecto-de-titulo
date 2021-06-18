@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path:'',
     children: [
-      {path:'alumno', component: AlumnoComponent},
+      {path:'apoderado-home', component: AlumnoComponent},
       {path:'asistencia', component: AsistenciaComponent},
       {path:'horario', component: HorarioComponent},
       {path:'seleccion', component: EleccionComponent},

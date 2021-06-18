@@ -5,10 +5,11 @@ import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.compo
 import { AuthRoutingModule } from './auth-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, RecuperarClaveComponent],
+  declarations: [LoginComponent, RecuperarClaveComponent, LoginAdminComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,

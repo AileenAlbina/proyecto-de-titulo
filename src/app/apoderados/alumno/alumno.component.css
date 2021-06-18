@@ -36,14 +36,18 @@
     }
 }
 
+.lectura input
+{
+    background-color: white;
+}
 
 .titulos
 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:#0992cd;
-    font-weight: bold;
+    font-size: 1.8rem;
     text-align: left;
-    margin-top: 1em;
+    margin-top: 0.8em;
     margin-left: 1rem;
 }
 

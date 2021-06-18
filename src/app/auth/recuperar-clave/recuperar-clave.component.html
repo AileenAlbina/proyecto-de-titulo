@@ -1,25 +1,55 @@
 <app-navbar-not-auth></app-navbar-not-auth>
-<app-footer></app-footer>
-
-
-<div class = "container">
+<div class="container container-padding">
     <div class="row">
-        <div class="col-lg-6  my-5 ">
-            <div class="card shadow-lg p-3 mb-5 bg-white">
-                <div class = 'card-header'> Recuperar contraseña: </div>
-                    <div class="card-body">
-                        <form  [formGroup] = "formRecuperarClave" (ngSubmit)="recuperarClave(formRecuperarClave.value)" >
-                            <div class="form-row">
-                                <div class="col-md-6 mb-4">
-                                    <label for="rut" class = "label mt-3" id ="LabelLogin" >Ingrese rut: </label>
-                                    <input type="text" formControlName="rut"  placeholder="Ingrese RUT" required>
-                                    <div class="invalid-feedback">Este campo es requerido.</div>
+        <div class="col-lg-4 col-sm-4 mt-3 mb-3">
+            <div class="card shadow-lg p-3 mb-4 bg-white">
+                <div class='card-header'> Recuperar Contraseña </div>
+                <div class="card-body">
+                    <form (ngSubmit)="onSave()" [formGroup]="loginForm">
+                        <div class="row">
+                            <div class="col-lg-12 mb-3">
+                                <span> <strong> ¿Usted es? </strong></span>
+                                <!--    TIPO DE USUARIO -->
+                                <div class="radioFontSize">
+                                    <div class="col-lg-12 mb-3 mt-3">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="apoderado-radio" value="isApoderado"
+                                                (change)="isCheckedApoderado($event)">
+                                            <label class="form-check-label" for="donor-radio">Apoderado</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="profesor-radio" value="isProfesor"
+                                                (change)="isCheckedProfesor($event)">
+                                            <label class="form-check-label" for="donor-radio">Profesor</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="otro-radio" value="otro" (change)="isCheckedOtro($event)">
+                                            <label class="form-check-label" for="donor-radio">Funcionario</label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <button  type = "submit" id="recuperarClaveButton"> Recuperar contraseña</button>                            
-                        </form>
-                    </div>
-                </div>                    
-         </div>                    
-    </div>
-</div>
+                                <!-- RUT INPUT -->
+
+                                <label for="rut" class="form-label"><strong>Rut</strong></label>
+                                <input type="text" class="form-control" id="rut" formControlName="rut"
+                                    [class]="isValidField('rut')" placeholder="Ingrese su rut (Ej: 11111111-1)">
+                                <!-- ERROR HANDLING -->
+                                <div class="invalid-feedback">
+                                    <span *ngIf="loginForm.get('rut').errors?.required">Por favor ingrese su
+                                        rut.</span>
+                                    <span *ngIf="loginForm.get('rut').errors?.pattern">Por favor ingrese rut de
+                                        esta forma XXXXXXXX-X.</span>
+                                </div>
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" class="btn mt-2 mb-3" id="loginButton">Recuperar Contraeña</button>
+                                </div>                     
+                            </div>                     
+                        </div>                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    

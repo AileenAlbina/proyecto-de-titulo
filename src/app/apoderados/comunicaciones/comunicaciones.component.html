@@ -9,24 +9,31 @@
     <div class="col">
       <div class="card shadow bg-white">
         <div class="card-header">
-          <p>Asistencia a clases</p>
+          <p>Libreta de comunicaciones </p>
         </div>
-        <div class="card-body">
+        <div class="card-body"> 
+          <form  [formGroup]="alumnoSelectForm">
+            <label for="selectAlumno-input" class="form-label"><strong>SeleccionarAlumno</strong></label>
+            <select class="selectAlumno-input" formControlName="alumnoSelect" id="selectAlumno-input"
+                style="width:fit-content" (change)=" actualizarAlumnos ($event)">
+                <option selected disabled>Seleccione un curso</option>
+                <option *ngFor=" let alumno of alumnos" [value]="alumno.rut">{{alumno.nombres}}
+                    {{alumno.apellidoPaterno}}</option>
+            </select>
+        </form>
           <table class="table table-bordered">
             <thead>
-              <tr>
-                <th scope="col">Tipo</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Contenido</th>
-                <th scope="col">Emisor</th>
+              <tr>                
+                <th scope="col">Asunto</th>
+                <th scope="col">Mensaje</th>
+                <th scope="col">Firmar</th>
               </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><i class="fas fa-cut"> Materiales</i></td>
-                    <td>23-04-2021</td>
-                    <td>Llevar temperas y pincel</td>
-                    <td>Profesor de arte: Nombre apellido</td>
+                <tr *ngFor="let com of comunicaciones">
+                  <td>{{com.asunto}}</td>
+                  <td>{{com.contenidoComunicacion}}</td>
+                  <td>     <button class="btn btn-danger" (onclick)="firmar()">Firmar</button></td>
                 </tr >
             </tbody>
           </table>
@@ -55,3 +62,13 @@
 
 
 </div>
+
+
+<ng-template #modalFirma>
+  <div class="modal-header">
+      <div class="modal-title"> Acusar recibo de la comunicación </div>
+      <div class="modal-body">
+        
+      </div>
+  </div>
+</ng-template>

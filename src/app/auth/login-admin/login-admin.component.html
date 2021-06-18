@@ -1,0 +1,48 @@
+<app-navbar-not-auth></app-navbar-not-auth>
+
+<div class="container container-padding">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-sm-4 mt-4">
+            <div class="card shadow-lg p-3 mb-5 bg-white">
+                <div class='card-header'> Iniciar sesión: </div>
+                <div class="card-body">
+                    <form (ngSubmit)="onSave()" [formGroup]="loginAdminForm">
+                        <div class="row">
+                            
+                            <!-- RUT INPUT -->
+                            <div class="col-lg-12 mb-3 mt-3">
+                                <label for="rut" class="form-label"><strong>Rut</strong>(<span
+                                        class="color">*</span>)</label>
+                                <input type="text" class="form-control" id="rut" formControlName="rut"
+                                    [class]="isValidField('rut')" placeholder="Ej: XXXXXXXX-X">
+                                <!-- ERROR HANDLING -->
+                                <div class="invalid-feedback">
+                                    <span *ngIf="loginAdminForm.get('rut').errors?.required">Por favor ingrese su
+                                        rut.</span>
+                                    <span *ngIf="loginAdminForm.get('rut').errors?.pattern">Por favor ingrese rut de
+                                        esta forma XXXXXXXX-X.</span>
+                                </div>
+                           
+                                <!-- PASSWORD INPUT -->
+                                <div class="col-lg-12 mb-3 mt-2">
+                                    <label for="UserPasswordInput"
+                                        class="form-label"><strong>Contraseña</strong></label>
+                                    <input type="password" class="form-control form-control-lg" id="UserPasswordInput"
+                                        placeholder="Ingresar su contraseña" formControlName="clave">
+                                    <!-- ERROR HANDLING -->
+                                    <div class="invalid-feedback">
+                                        <span *ngIf="loginAdminForm.get('clave').errors?.required">Por favor ingrese
+                                            su contraseña.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" class="btn mt-3 mb-4" id="loginButton">Ingresar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

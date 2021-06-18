@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="card shadow bg-white mb-3">
+
+            <!-- CARD HEADER-->
+            <div class="card-header">
+                <i class="fas fa-user lead p-3">
+                    Crear Curso
+                </i>
+            </div>
+
+            <!-- CARD BODY-->
+            <div class="card-body mb-5">
+
+                <!-- REGISTER FORM-->
+                <form (ngSubmit)="onSave()" [formGroup]="cursoRegisterForm">
+                    <div class="row">
+                        <!-- Fase -->
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <h5>drop dow fase</h5>
+                            </div>
+                        </div>
+                        <!-- Numero -->
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <h5>dow curso</h5>
+                            </div>
+                        </div>
+
+                        <!-- Letra -->
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="letra-input" class="form-label"><strong>Letra</strong></label>
+                                <input type="text" class="form-control" id="letra-input" formControlName="letra"
+                                    [class]="isValidField('letra')" placeholder="Ingrese letra si corresponde.">
+                                <!-- ERROR HANDLING -->
+                                <div class="invalid-feedback">
+                                    <span *ngIf="cursoRegisterForm.get('letra').errors?.required">
+                                        Ingrese máximo 1 caracter.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- sala -->
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="sala-input" class="form-label"><strong>Sala</strong>(<span
+                                        class="color">*</span>)</label>
+                                <input type="text" class="form-control" id="sala-input" formControlName="sala"
+                                    [class]="isValidField('sala')" placeholder="Ingrese sala de clasesdesignada.">
+
+                                <!-- ERROR HANDLING -->
+                                <div class="invalid-feedback">
+                                    <span *ngIf="cursoRegisterForm.get('sala').errors?.required">
+                                        Ingrese salón de clases asignado al curso.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- BUTTONS -->
+                        <div class="row justify-content-evenly mt-3 mb-3">
+                            <div class="col-lg-2 col-3">
+                                <button type="submit" class="btn btn-success"
+                                    [disabled]="!cursoRegisterForm.valid">Crear</button>
+                            </div>
+                            <div class="col-lg-2 col-3">
+                                <button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

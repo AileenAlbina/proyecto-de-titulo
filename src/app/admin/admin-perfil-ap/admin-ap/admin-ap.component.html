@@ -1,0 +1,32 @@
+<div class="card shadow bg-white">
+    <div class="card-header">
+        <input type="text" class="form-control" name="userList"
+            placeholder="Buscar apoderado" [(ngModel)]="userList" id="busqueda">
+    </div>
+    <div class="card-body">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>Rut</th>
+                    <th>Nombres</th>
+                    <th>Apellido paterno</th>
+                    <th>Apellido materno</th>
+                    <th>Cantidad de alumnos</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pf of listAp | search:userList">
+                    <td>{{pf.rut}}</td>
+                    <td>{{pf.nombres}}</td>
+                    <td>{{pf.apellidoPaterno}}</td>
+                    <td>{{pf.apellidoMaterno}}</td>
+                    <td>{{pf.cantAlumnos}}</td>
+                    <td>editar</td>
+                    <td>borrar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

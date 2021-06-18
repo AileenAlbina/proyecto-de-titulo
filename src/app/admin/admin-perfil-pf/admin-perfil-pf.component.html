@@ -1,15 +1,76 @@
 <app-navbar></app-navbar>
 
-<div class="containter">
-    <div class="row">
-        <div class="col">
-            <div class="cad shadow bg-white">
-                <div class="card-content">
-                    <h4 class="titulos">Administrar perfil Profesor o Funcionario</h4>
-                    <button class="genericButton">Crear nuevo usuario</button>
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-2 d-none d-sm-none d-md-block">
+            <!--SIDEBAR-->
+            <div class="sidebar">
+                <div class="card shadow bg-white">
+                    <div class="card-content">
+                        <div class="tituloSideBar"><strong>Adminsitrar profesores<br> y funcionarios</strong></div>
+                        <ul>
+                            <li><a href="admin/user-create"><i class="fas fa-user lead p-3"></i>Crear Perfil</a></li>
+                            <li><a href="admin/admin-home"><i class="fas fa-home lead p-3"></i>Menú Principal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Componentes-->
+        <div class="col-10" id='contFAlumno'>
+            <div class="card shadow bg-white mt-1">
+                <div class="card-content d-block d-sm-block d-md-none">
+                    <div class="menu">
+                        <h4 class="titulos">Consultar</h4>
+                        <a href="apoderados/calificaciones" class="d-block"><i
+                                class="fas fa-user-graduate lead p-3"></i>Calificiaciones</a>
+                        <a href="apoderados/asistencia" class="d-block"><i
+                                class="fas fa-user-check lead p-3"></i>Asistencia</a>
+                        <a href="apoderados/comportamiento" class="d-block"><i
+                                class="far fa-edit lead p-3"></i>Comportamiento</a>
+                        <a href="apoderados/comunicaciones" class="d-block"><i
+                                class="far fa-envelope lead p-3"></i>Comunicaciones</a>
+                        <a href="apoderados/horario" class="d-block"><i class="far fa-calendar-alt lead p-3"></i>Horario
+                            de clases</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow bg-white">
+                <div class="card-header">
+                    <div class="titulo" style="text-align: center;">Modificar o Eliminar Profesionales de la educación
+                    </div>
+                    <input type="text" class="form-control" name="userList"
+                        placeholder="Buscar profesional de la educación por nombre" [(ngModel)]="userList"
+                        id="busqueda">
                 </div>
                 <div class="card-body">
-                                  
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Rut</th>
+                                <th>Nombres</th>
+                                <th>Apellido paterno</th>
+                                <th>Apellido materno</th>
+                                <th>Profesor jefe</th>
+                                <th>Editar</th>
+                                <th>Borrar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let pf of listPF | search:userList">
+                                <td>{{pf.rut}}</td>
+                                <td>{{pf.nombres}}</td>
+                                <td>{{pf.apellidoPaterno}}</td>
+                                <td>{{pf.apellidoMaterno}}</td>
+                                <td>{{pf.profJefe}}</td>
+                                <td> <button (click)="editar(pf)" class="botonCrud"><i
+                                            class="fas fa-user-edit lead "></i></button></td>
+                                <td> <button (click)="eliminar(pf)" class="botonCrud"><i
+                                            class="fas fa-trash-alt lead "></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

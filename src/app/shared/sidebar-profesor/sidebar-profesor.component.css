@@ -1,0 +1,47 @@
+
+.sidebar
+{
+    height: max-content;
+    width:max-content;
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.sidebar a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li:hover{
+    /*background: #444;  dark theme*/ 
+    background: white;
+    border-left: 5px solid #0992cd;
+}
+
+.sidebar li{
+   outline: 1px solid white;
+   transition: border 0.3s;
+}
+
+.sidebar i{
+    color: #ae3978;
+}
+
+.consultar
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#0992cd;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+}

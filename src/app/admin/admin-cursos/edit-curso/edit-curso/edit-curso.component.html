@@ -1,0 +1,30 @@
+<div class="card shadow bg-white">
+    <div class="card-header">
+        <input type="text" class="form-control" name="cursoList"
+            placeholder="Buscar profesional de la educación" [(ngModel)]="cursoList" id="busqueda">
+    </div>
+    <div class="card-body">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>Rut</th>
+                    <th>Nombres</th>
+                    <th>Apellido paterno</th>
+                    <th>Apellido materno</th>
+                    <th>Profesor jefe</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pf of listCurso | search:cursoList">
+                    <td>{{pf.numero}}</td>
+                    <td>{{pf.grado}}</td>
+                    <td>Ver alumnos</td>
+                    <td>editar</td>
+                    <td>borrar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

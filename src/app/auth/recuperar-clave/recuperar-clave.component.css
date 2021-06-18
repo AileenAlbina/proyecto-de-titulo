@@ -1,21 +1,65 @@
-.card-header{
-    background-color:   #0992cd;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.3rem;
-    color: white;
+.navbar
+{
+    background-color:  #0992cd;
 }
 
-#recuperarClaveButton
+.navbar-brand
 {
-    background-color: #ae3978;
+    color: white  ;
+}
+
+.card-header
+{
+    background-color:  #0992cd;;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     border-radius: 6px;
-    border-color:#ae3978;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.3rem;
 }
 
 .card-body
 {
-    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    border-radius:6px;
+}
+
+#loginButton
+{
+    padding: 0.3rem;
+    font-size: 1rem ;
+    color: white;
+    background-color: #ae3978;
+    border-radius: 6px;
+    border: 2px solid #ae3978;   
+    align-items: center;
+    margin-top: 1cm;
+    margin-left: 1.5cm;
+    margin-right: 1cm;
+    width: 60%;
+    justify-content: center;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.clave
+{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    margin-left: 1.5cm;
+}
+
+.requerido
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: red;
+    font-size: 0.7rem;
+}
+
+.radioFontSize
+{
+    font-size: 0.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
